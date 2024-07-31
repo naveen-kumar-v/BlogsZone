@@ -5,8 +5,10 @@ export const metadata = {
   description: "Discover a diverse range of insightful and engaging blog posts on BlogsZone. Explore topics from technology to lifestyle, written by expert bloggers. Stay informed, entertained, and inspired with our regularly updated content.",
 };
 
+const url = process.env.NEXT_PUBLIC_BASE_URL;
+
 const getBlogs = async() => {
-  const res = await fetch("http://localhost:3000/api/blog", {cache: 'no-store'});
+  const res = await fetch(`${url}/api/blog`, {cache: 'no-store'});
 
   if(!res.ok){
     throw new Error("Something went wrong!");

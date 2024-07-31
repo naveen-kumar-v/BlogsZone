@@ -24,8 +24,10 @@ export const MetaData = async ({ params }) => {
   };
 };
 
+const url = process.env.NEXT_PUBLIC_BASE_URL;
+
 const getBlog = async(slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {cache: 'no-store'});
+  const res = await fetch(`${url}/api/blog/${slug}`, {cache: 'no-store'});
 
   if(!res.ok){
     throw new Error("Something went wrong!");
