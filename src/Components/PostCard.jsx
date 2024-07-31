@@ -27,7 +27,7 @@ const PostCard = async ({ blog }) => {
       <div className="relative py-4 max-w-[90%]">
         <h2 className="text-lg md:text-xl font-semibold">{blog.title}</h2>
         <p className=" text-[13px] pb-2 font-medium text-gray-500">
-          {author.username}, {formatDate(blog?.date)}
+          {author?.username}, {formatDate(blog?.date)}
         </p>
         <p className="line-clamp-3">{blog.desc}</p>
         <div className="flex justify-between items-center pt-1">

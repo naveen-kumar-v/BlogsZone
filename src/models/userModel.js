@@ -1,12 +1,9 @@
 import mongoose from "mongoose";
 
-const User = mongoose.models.User || mongoose.model("User", new mongoose.Schema({
+const User = mongoose.models?.User || mongoose.model("User", new mongoose.Schema({
   username: {
     type: String,
     required: true,
-    unique: true,
-    min: 3,
-    max: 20,
   },
   email: {
     type: String,
@@ -16,8 +13,6 @@ const User = mongoose.models.User || mongoose.model("User", new mongoose.Schema(
   },
   password: {
     type: String,
-    min: 8,
-    required: true,
   },
   img: {
     type: String,

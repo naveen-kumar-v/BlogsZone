@@ -8,8 +8,8 @@ export default function Home() {
         <h1 className="font-bold text-[64px] md:text-[80px] leading-[84px]">Creative Thoughts Agency</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt neque excepturi doloribus repellendus ipsa quibusdam </p>
         <div className="flex gap-4 font-semibold">
-          <button className="rounded p-2 px-4 bg-[var(--btn)]"><Link href={"/about"}>Learn More</Link></button>
-          <button className="rounded p-2 px-4 bg-white text-gray-950"><Link href={"/contact"}>Contact</Link></button>
+        <Link href={"/about"}><button className="rounded p-2 px-4 bg-[var(--btn)]">Learn More</button></Link>
+          <Link href={"/contact"}><button className="rounded p-2 px-4 bg-white text-gray-950">Contact </button> </Link>
         </div>
         <Image src="/brands.png" alt="hero" width={400} height={100} className="grayscale" />
       </div>

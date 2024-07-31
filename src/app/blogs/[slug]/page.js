@@ -25,7 +25,7 @@ export const MetaData = async ({ params }) => {
 };
 
 const getBlog = async(slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`, {cache: 'no-store'});
 
   if(!res.ok){
     throw new Error("Something went wrong!");
@@ -62,9 +62,9 @@ const page = async ({ params }) => {
         <Image src={blog?.img} alt="Blog pic" fill className="object-cover" />
       </div>
 
-      <div className="flex-[2_2_0%] flex gap-10 justify-between flex-col h-full">
+      <div className="flex-[2_2_0%] flex gap-8 md:gap-10 justify-between flex-col h-full">
         <h1 className="font-bold text-2xl md:text-4xl">{blog?.title}</h1>
-        <div className="flex gap-12">
+        <div className="flex gap-8 md:gap-12">
           <Suspense fallback={<AuthorLoader />}>
             <AuthorDetails id={authorId} />
           </Suspense>

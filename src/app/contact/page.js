@@ -1,5 +1,3 @@
-// "use client"
-
 import dynamic from 'next/dynamic';
 import styles from './contact.module.css'
 import Image from 'next/image';
@@ -12,7 +10,7 @@ export const metadata = {
 
 const page = () => {
 
-  return <div className="flex gap-14 w-full ">
+  return <div className="flex gap-14 w-full flex-1">
     <div className="flex-1 relative h-[450px] hidden lg:flex">
       <Image src="/contact.png" alt="Contact image" fill className='object-contain' />
     </div>
