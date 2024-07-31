@@ -72,7 +72,7 @@ const Links = ({session}) => {
       </nav>
 
     {/* Navbar for the small screen */}
-      <button
+      {/* <button
         className="block md:hidden"
         onClick={() => setOpen((prev) => !prev)}
       >
@@ -119,7 +119,7 @@ const Links = ({session}) => {
             </Link>
           }
           </div>
-      </nav>
+      </nav> */}
     </>
   )
 }
