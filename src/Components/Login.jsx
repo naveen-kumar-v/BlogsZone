@@ -25,7 +25,7 @@ const Login = () => {
 
     if(response.status === 200) {
       toast.success(response.message)
-      router.push('/blogs');
+      router.push("/blogs");
     } else {
       toast.error(response.message);
     }
@@ -53,7 +53,7 @@ const Login = () => {
           <button type="submit" className="bg-[var(--btn)] font-semibold py-1.5 rounded mt-2">Login</button>
           <div className="flex justify-between items-center w-full text-sm font-medium flex-col md:flex-row gap-2">
               <Link href={"/forgot-password"} className="text-blue-500 hover:underline transition-all font-bold">Forgot Password?</Link>
-              <p>Don't have an account? <Link href={"/signup"} className="text-blue-500 hover:underline transition-all font-bold">Sign Up</Link> </p>
+              <p>Don`&apos;`t have an account? <Link href={"/signup"} className="text-blue-500 hover:underline transition-all font-bold">Sign Up</Link> </p>
           </div>
       </form>
 
